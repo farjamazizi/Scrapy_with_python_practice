@@ -23,14 +23,3 @@ class TitleNewsSpider(CrawlSpider):
             'lead': response.xpath("normalize-space(//div[@class='lead']/p/text())").get()
         }
 
-
-# class TitleNewsSpiderAPI(scrapy.spider):
-#     name = 'title_news'
-#     allowed_domains = ['www.eghtesadnews.com']
-#     start_urls = ['https://nfetch.yektanet.com/api/v2/load']
-
-#     def parse(self, response):
-#         resp = json.loads(response.body)
-#         title_news = resp.get("title_news")
-#         print(title_news)
-        
